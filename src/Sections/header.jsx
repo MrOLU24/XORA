@@ -47,7 +47,8 @@ const Header = () => {
           className="lg:hidden z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center"
           onClick={() => setIsMenuOpen((preState) => !preState)}
         >
-          <img className="size-1/2 object-contain"
+          <img
+            className="size-1/2 object-contain"
             src={`/images/${isMenuOpen ? "close" : "magic"}.svg`}
             alt="burger"
           />
