@@ -1,9 +1,9 @@
-import React from "react";
+import Header from "./Sections/header";
 
 function App() {
   return (
     <main className="overflow-hidden">
-      <h1>hello xora</h1>
+      <Header />
     </main>
   );
 }
