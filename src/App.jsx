@@ -2,9 +2,9 @@ import React from "react";
 
 function App() {
   return (
-    <div className="flex justify-center items-center h-screen">
-      <h1>App</h1>
-    </div>
+    <main className="overflow-hidden">
+      <h1>hello xora</h1>
+    </main>
   );
 }
 export default App;
