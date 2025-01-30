@@ -15,7 +15,7 @@ export const features = [
         icon: "/images/feature-2.png",
         caption: "DEMO CAPTION",
         title: "FEATURE 2",
-        text: "text for feature 2",
+        text: "text",
         button: {
             icon: '/images/magictouch.svg',
             title: 'watch the DEMO',
