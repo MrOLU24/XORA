@@ -15,7 +15,7 @@ const Features = () => {
               >
                 <div className="w-full flex justify-start items-start">
                   <div className="-ml-3 mb-12 flex items-center justify-center flex-col">
-                    <div className="w-0.5 h-16 bg-s3 "/>
+                    <div className="w-0.5 h-16 bg-s3"/>
                     <img
                       src={icon}
                       className="size-28 object-contain"
@@ -23,6 +23,7 @@ const Features = () => {
                     />
                   </div>
                 </div>
+                <p className="caption mb-5 max-md:mb-6 max-md:h5 ">{caption}</p>
               </div>
             ))}
           </div>
