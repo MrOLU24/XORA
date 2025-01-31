@@ -1,6 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
-import { features } from "../Contants";
+import { details, features } from "../Contants";
 import Button from "../Components/Button";
 
 const Features = () => {
@@ -24,16 +24,29 @@ const Features = () => {
                     />
                   </div>
                 </div>
-                <p className="caption mb-5 max-md:mb-6 max-md:h5 ">{caption}</p>
+                <p className="caption mb-5 max-md:mb-6">{caption}</p>
                 <h2 className="max-w-400 mb-7 h3 text-p4 max-md:mb-6 max-md:h5 ">
                   {title}
                 </h2>
-                <p className="mb-111 max-md:mb-8 max-md:body-3">
-                    {text}
-                </p>
+                <p className="mb-11 body-1 max-md:mb-8 max-md:body-3">{text}</p>
                 <Button icon={button.icon}>{button.title}</Button>
               </div>
             ))}
+            <ul className="relative flex justify-around flex-grow px-[5%] border-2 border-s3 rounded-7xl max-md:hidden">
+              <div className="absolute bg-s3/20 top-[38%] left-0 right-0 w-full h-[1px] z-10" />
+              {details.map(({ id, icon, title }) => (
+                <li key={id} className="relative pt-16 px-4 pb-14">
+                  <div className="absolute top-0 bottom-0 left-1/2 bg-s3/20 w-[1px] z-10" />
+                  <div>
+                    <img
+                      src={icon}
+                      alt={title}
+                      className="size-17/20 object-contain z-20"
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </Element>
