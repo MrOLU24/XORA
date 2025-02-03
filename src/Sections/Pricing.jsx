@@ -64,18 +64,9 @@ const Pricing = () => {
                 <div
                   className={clsx(
                     "absolute left-0 right-0 z-2 flex items-center justify-center",
-                    index == 1 ? "-top-6" : "xl:-top-11"
+                    index == 1 ? "-top-6" : "-top-11"
                   )}
-                >
-                  <img
-                    className={clsx(
-                      "object-contain drop-shadow-2xl",
-                      index == 1 ? "size-[120px]" : "size-[88px]"
-                    )}
-                    src={plan.logo}
-                    alt={plan.title}
-                  />
-                </div>
+                ></div>
               </div>
             ))}
           </div>
