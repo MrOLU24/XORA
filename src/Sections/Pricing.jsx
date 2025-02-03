@@ -58,15 +58,24 @@ const Pricing = () => {
                 className="pricing-plan_first pricing-plan_last pricing-plan_add pricing-plan_even relative border-2 p-7 max-xl:min-w-80 max-lg:rounded-3xl xl:w-[calc(33.33%+2px)]"
                 key={plan.id}
               >
-                {index == 1 && (
+                {index === 1 && (
                   <div className="g4 absolute h-330 left-0 right-0 top-0 z-1 rounded-tl-3xl rounded-tr-3xl" />
                 )}
                 <div
                   className={clsx(
                     "absolute left-0 right-0 z-2 flex items-center justify-center",
-                    index == 1 ? "-top-6" : "-top-11"
+                    index === 1 ? "-top-6" : "-top6 xl:-top-11"
                   )}
-                ></div>
+                >
+                  <img
+                    className={clsx(
+                      "object-contain drop-shadow-2xl",
+                      index === 1 ? "size-[120px]" : "size-[88px]"
+                    )}
+                    src={plan.logo}
+                    alt={plan.title}
+                  />
+                </div>
               </div>
             ))}
           </div>
