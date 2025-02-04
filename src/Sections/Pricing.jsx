@@ -3,6 +3,7 @@ import { Element } from "react-scroll";
 import { useState } from "react";
 import clsx from "clsx";
 import { plans } from "../Contants";
+import CountUp from "react-countup";
 
 const Pricing = () => {
   const [Monthly, setMonthly] = useState(false);
