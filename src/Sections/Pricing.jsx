@@ -4,6 +4,7 @@ import { useState } from "react";
 import clsx from "clsx";
 import { plans } from "../Contants";
 import CountUp from "react-countup";
+import Button from "../Components/Button";
 
 const Pricing = () => {
   const [Monthly, setMonthly] = useState(false);
@@ -126,11 +127,23 @@ const Pricing = () => {
                       key={feature}
                       className="relative flex items-center gap-5"
                     >
-                      <img src={'/images/check.png'} alt="check" className="size-10 object-contain" />
+                      <img
+                        src={"/images/check.png"}
+                        alt="check"
+                        className="size-10 object-contain"
+                      />
                       <p className="flex-1">{feature}</p>
                     </li>
                   ))}
                 </ul>
+                <div className="mt-10 flex w-full justify-center">
+                  <Button icon={plan.icon}>Get Started</Button>
+                </div>
+                {index === 1 && (
+                  <p className="small-compact mt-9 text-center text-p3 before:content-['-'] before:mx-2.5 after:mx-2.5 after:content-['-']">
+                    Limited time offer
+                  </p>
+                )}
               </div>
             ))}
           </div>
