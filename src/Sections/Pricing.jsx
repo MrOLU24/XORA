@@ -92,7 +92,21 @@ const Pricing = () => {
                     {plan.title}
                   </div>
                   <div className="relative z-2 flex items-center justify-center">
-                    <div className={clsx('h-num flex items-start', index === 1 ? 'text-p3' : "text-p4")}>$ AMOUNT</div>
+                    <div
+                      className={clsx(
+                        "h-num flex items-start",
+                        index === 1 ? "text-p3" : "text-p4"
+                      )}
+                    >
+                      ${" "}
+                      <CountUp
+                        start={plan.priceMonthly}
+                        end={Monthly ? plan.priceMonthly : plan.priceYearly}
+                        duration={0.4}
+                        useEasing={false}
+                        preserveValue={true}
+                      />{" "}
+                    </div>
                   </div>
                 </div>
               </div>
