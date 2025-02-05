@@ -1,7 +1,10 @@
 import React from "react";
 import { Element } from "react-scroll";
+import { faq } from "../Contants";
+import FaqItems from "../Components/faqitems";
 
 const Faq = () => {
+  const halfLength = Math.floor(faq.length / 2);
   return (
     <Element name="faq" className="relative">
       <div className="container relative z-2 py-28">
@@ -17,7 +20,18 @@ const Faq = () => {
       </div>
       <div className="faq-glow_before relative z-2 border-2 border-s1">
         <div className="container flex gap-10 max-lg:block">
-          
+          <div className="rounded-half absolute -top-10 left-[calc(50%-40px)] z-4 flex size-20 items-center justify-center border-2 border-s2 bg-s1">
+            <img
+              className="size-1/2"
+              src="/images/faq-logo.svg"
+              alt="fawlogo"
+            />
+          </div>
+          <div className="relative flex-1 pt-24">
+            {faq.slice(0, halfLength).map((item, index)=>(
+              <FaqItems key={item.id} item={item} index={index} />
+            ))}
+          </div>
         </div>
       </div>
     </Element>
