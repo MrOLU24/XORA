@@ -1,9 +1,7 @@
 import clsx from "clsx";
-import React from "react";
 import { useState } from "react";
-import {SlideDown} from 'react-slidedown';
-import 'react-slidedown/lib/slidedown.css';
-
+import { SlideDown } from "react-slidedown";
+import "react-slidedown/lib/slidedown.css";
 
 const FaqItems = ({ item, index }) => {
   const [activeid, setActive] = useState(null);
@@ -13,7 +11,7 @@ const FaqItems = ({ item, index }) => {
       <div
         className="group flex cursor-pointer items-center justify-between gap-10 px-7"
         onClick={() => {
-            setActive (activeid === item.id ? null : item.id);
+          setActive(activeid === item.id ? null : item.id);
         }}
       >
         <div className="flex-1">
@@ -30,15 +28,18 @@ const FaqItems = ({ item, index }) => {
             {item.question}
           </div>
         </div>
-        <div className={clsx('faq-icon relative flex size-12 items-center justify-center rounded-full border-2 border-s2 shadow-400 transition-all duration-500 group-hover:border-s4', active && 'before:bg-p1 after:rotate-0 after:bg-p1')}>
-            <div className="g4 size-11/12 rounded-full shadow-300"/>
+        <div
+          className={clsx(
+            "faq-icon relative flex size-12 items-center justify-center rounded-full border-2 border-s2 shadow-400 transition-all duration-500 group-hover:border-s4",
+            active && "before:bg-p1 after:rotate-0 after:bg-p1"
+          )}
+        >
+          <div className="g4 size-11/12 rounded-full shadow-300" />
         </div>
       </div>
       <SlideDown>
         {activeid === item.id && (
-            <div className="body-3 px-7 py-3.5 ">
-                {item.answer}
-            </div>
+          <div className="body-3 px-7 py-3.5 ">{item.answer}</div>
         )}
       </SlideDown>
     </div>
