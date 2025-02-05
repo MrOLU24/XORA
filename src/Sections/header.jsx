@@ -30,7 +30,6 @@ const Header = () => {
       {title}
     </LinkScroll>
   );
-
   return (
     <header
       className={clsx(
@@ -63,7 +62,7 @@ const Header = () => {
                     spy
                     smooth
                     className={clsx(
-                      "max-lg:hidden transition-transform duration-500 cursor-pointer"
+                      "max-lg:hidden transition-transform duration-700 cursor-pointer"
                     )}
                   >
                     <img
