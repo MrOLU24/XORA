@@ -5,6 +5,7 @@ import Features from "./sections/Features";
 import Pricing from "./sections/Pricing";
 import Faq from "./sections/Faq";
 import Testimonial from "./sections/Testimonial";
+import Download from "./sections/Download";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Pricing/>
       <Faq/>
       <Testimonial/>
+      <Download/>
     </main>
   );
 }
