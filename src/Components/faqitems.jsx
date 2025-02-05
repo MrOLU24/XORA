@@ -42,9 +42,14 @@ const FaqItems = ({ item, index }) => {
           <div className="body-3 px-7 py-3.5 ">{item.answer}</div>
         )}
       </SlideDown>
-      <div className={clsx('g5 -bottom-7 -top-7 left-0 right-0 -z-1 rounded-3xl opacity-0 transition-opacity duration-500 absolute', active && "opacity-100")}>
-        <div className="g4 absolute inset-0.5 -z-1 rounded-3xl"/>
-        <div className="absolute left-8 top-0 h-0.5 w-40 bg-p1"/> 
+      <div
+        className={clsx(
+          "g5 -bottom-7 -top-7 left-0 right-0 -z-1 rounded-3xl opacity-0 transition-opacity duration-500 absolute",
+          active && "opacity-100"
+        )}
+      >
+        <div className="g4 absolute inset-0.5 -z-1 rounded-3xl" />
+        <div className="absolute left-8 top-0 h-0.5 w-40 bg-p1" />
       </div>
     </div>
   );
