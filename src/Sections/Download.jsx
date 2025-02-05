@@ -82,7 +82,7 @@ const Download = () => {
               <li key={id} className="mx-10 relative">
                 <img
                   className={clsx(
-                    "transition-all duration-500 animate-pulse",
+                    "transition-all duration-500",
                     highlight === index
                       ? "drop-shadow-[0_0_30px_#2EF2FF] shadow-[0_0_15px_#0C1838] brightness-400 saturate-200 opacity-100"
                       : "brightness-200 opacity-90"

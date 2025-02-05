@@ -406,7 +406,7 @@ export const socials = [
     id: "0",
     title: "x",
     icon: "/images/socials/x.svg",
-    url: "#",
+    url: "https://x.com/MrOlu247",
   },
   {
     id: "1",
