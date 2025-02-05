@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "./sections/Header.jsx";
-import Hero from "./sections/Hero.jsx";
-import Features from "./sections/Features.jsx";
-import Pricing from "./sections/Pricing.jsx";
-import Faq from "./sections/Faq.jsx";
-import Testimonial from "./sections/Testimonial.jsx";
-import Download from "./sections/Download.jsx";
-import Footer from "./sections/Footer.jsx";
+import Header from "./section/HeaderSection.jsx";
+import Hero from "./section/HeroSetion.jsx";
+import Features from "./section/FeaturesSection.jsx";
+import Pricing from "./section/PricingSection.jsx";
+import Faq from "./section/FaqSection.jsx";
+import Testimonial from "./section/TestimonialSection.jsx";
+import Download from "./section/DownloadSection.jsx";
+import Footer from "./section/FooterSection.jsx";
 
 function App() {
   return (
