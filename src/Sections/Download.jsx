@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Element } from "react-scroll";
 import { links, logos } from "../Contants";
 import Marker from "../Components/Maker";
+import clsx from "clsx";
 
 const Download = () => {
+  const [highlight, setHighlight] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHighlight((prev) => (prev + 1) % logos.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [logos.length]);
+
   return (
     <section>
       <Element
@@ -67,9 +78,20 @@ const Download = () => {
             </div>
           </div>
           <ul className="mt-24 flex justify-center max-lg:hidden">
-            {logos.map(({ id, url, width, height, title }) => (
-              <li key={id} className="mx-10">
-                <img src={url} width={width} height={height} alt={title} />
+            {logos.map(({ id, url, width, height, title }, index) => (
+              <li key={id} className="mx-10 relative">
+                <img
+                  className={clsx(
+                    "transition-all duration-500 animate-pulse",
+                    highlight === index
+                      ? "drop-shadow-[0_0_30px_#2EF2FF] shadow-[0_0_15px_#0C1838] brightness-400 saturate-200 opacity-100"
+                      : "brightness-200 opacity-90"
+                  )}
+                  src={url}
+                  width={width}
+                  height={height}
+                  alt={title}
+                />
               </li>
             ))}
           </ul>
