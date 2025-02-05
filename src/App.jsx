@@ -6,7 +6,7 @@ import Pricing from "./sections/Pricing";
 import Faq from "./sections/Faq";
 import Testimonial from "./sections/Testimonial";
 import Download from "./sections/Download";
-
+import Footer from "./sections/Footer";
 function App() {
   return (
     <main className="overflow-hidden">
@@ -17,6 +17,7 @@ function App() {
       <Faq/>
       <Testimonial/>
       <Download/>
+      <Footer/>
     </main>
   );
 }
