@@ -1,6 +1,9 @@
 import clsx from "clsx";
 import React from "react";
 import { useState } from "react";
+import {SlideDown} from 'react-slidedown';
+import 'react-slidedown/lib/slidedown.css';
+
 
 const FaqItems = ({ item, index }) => {
   const [activeid, setActive] = useState(null);
@@ -31,6 +34,13 @@ const FaqItems = ({ item, index }) => {
             <div className="g4 size-11/12 rounded-full shadow-300"/>
         </div>
       </div>
+      <SlideDown>
+        {activeid === item.id && (
+            <div className="body-3 px-7 py-3.5 ">
+                {item.answer}
+            </div>
+        )}
+      </SlideDown>
     </div>
   );
 };
