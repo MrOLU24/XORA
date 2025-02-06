@@ -7,6 +7,7 @@ import Faq from "./section/FaqSection.jsx";
 import Testimonial from "./section/TestimonialSection.jsx";
 import Download from "./section/DownloadSection.jsx";
 import Footer from "./section/FooterSection.jsx";
+// renamed
 
 function App() {
   return (
